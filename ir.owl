@@ -1,1 +1,1869 @@
-Blank
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ifs.tuwien.ac.at/~admire/ir_ontology/ir"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://ifs.tuwien.ac.at/~admire/ir_ontology/ir"
+     versionIRI="http://ifs.tuwien.ac.at/~admire/ir_ontology/1.0/ir">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Information Retrieval onthology.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#BIR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BM25"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaseRemover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Challenge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chunker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Collection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiacriticRemover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Divergence-BasedModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DivergenceFromRandomness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationCampaign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationMeasureParametric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationMeasureRankedResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationMeasureUnrankedResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvaluationThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExperimentComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtendedBoolean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FilterContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FilterDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Groundtruth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeuristicModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IDF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRModelThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRModelVariant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRSystemComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRSystemCore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRSystemThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indexer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LanguageModeling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LatentSemanticIndexing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lemmatizer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinguisticFilter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Merger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#POSTagger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Preprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProbabilisticModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QueryLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reranker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Run"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Score"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scorer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScoringFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spellchecker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StandardBoolean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stemmer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StopWords"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TF-IDF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestCollectionComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tokenizer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Topics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VectorSpaceModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightingSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToIRSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromIRSystemToIRModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeenUsedOnEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeenUsedOnTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChallenge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExperimentComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGrountruth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIRSystemCore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIndexer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMerger"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReranker"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScorer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScoringFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTestCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopics"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeightingSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOnIRModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOnScoringFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOnWeightingSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isChallengeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCollectionLevelPreprocessingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCollectionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEventOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFollowedByCollectionLevelPreprocessingComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGroundtruthOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInstanceOfEvaluationMeasureParametric"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTaskOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTestCollectionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTopicsOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVariantOfScoringFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVariantOfWeightingSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWeightingSchemaOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measuredByEvaluationMeasure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#acronym"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#collectionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eventID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eventYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#references"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#acronym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#formula"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#progress"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BIR"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BM25"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaseRemover"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaseRemover"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Challenge"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Challenge"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasTask"/>
+                <Class IRI="#Task"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#isChallengeOf"/>
+                <Class IRI="#Event"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chunker"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chunker"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Collection"/>
+        <Class IRI="#TestCollectionComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCollectionLevelPreprocessingComponent"/>
+            <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        <Class IRI="#PreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+            <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiacriticRemover"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiacriticRemover"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Divergence-BasedModel"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DivergenceFromRandomness"/>
+        <Class IRI="#Divergence-BasedModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+                <Class IRI="#DocumentLevelPreprocessingComponent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+                <Class IRI="#Tokenizer"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+        <Class IRI="#PreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+            <Class IRI="#DocumentLevelPreprocessingComponent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationCampaign"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationCampaign"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEvent"/>
+            <Class IRI="#Event"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationMeasure"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationMeasureParametric"/>
+        <Class IRI="#EvaluationMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationMeasureParametric"/>
+        <ObjectUnionOf>
+            <Class IRI="#EvaluationMeasureRankedResult"/>
+            <Class IRI="#EvaluationMeasureUnrankedResult"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationMeasureRankedResult"/>
+        <Class IRI="#EvaluationMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvaluationMeasureUnrankedResult"/>
+        <Class IRI="#EvaluationMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasChallenge"/>
+                <Class IRI="#Challenge"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#isEventOf"/>
+                <Class IRI="#EvaluationCampaign"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasExperimentComponent"/>
+                <Class IRI="#Run"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasExperimentComponent"/>
+                <Class IRI="#Score"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasExperimentComponent"/>
+                <Class IRI="#TestCollection"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentComponent"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExtendedBoolean"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilterContent"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilterContent"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilterDocument"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Groundtruth"/>
+        <Class IRI="#TestCollectionComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeuristicModel"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IDF"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IDF"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+            <Class IRI="#TF-IDF"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRModel"/>
+        <Class IRI="#IRModelThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRModel"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasScoringFunction"/>
+                <Class IRI="#ScoringFunction"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeightingSchema"/>
+                <Class IRI="#WeightingSchema"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRModelVariant"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRSystem"/>
+        <Class IRI="#IRSystemThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRSystem"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectMinCardinality cardinality="2">
+                    <ObjectProperty IRI="#hasIRSystemCore"/>
+                    <Class IRI="#IRSystemCore"/>
+                </ObjectMinCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+                    <Class IRI="#CollectionLevelPreprocessing"/>
+                </ObjectExactCardinality>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasMerger"/>
+                    <Class IRI="#Merger"/>
+                </ObjectExactCardinality>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasReranker"/>
+                    <Class IRI="#Reranker"/>
+                </ObjectMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasIRSystemCore"/>
+                    <Class IRI="#IRSystemCore"/>
+                </ObjectExactCardinality>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+                    <Class IRI="#CollectionLevelPreprocessing"/>
+                </ObjectMaxCardinality>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasReranker"/>
+                    <Class IRI="#Reranker"/>
+                </ObjectMaxCardinality>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRSystemComponent"/>
+        <Class IRI="#IRSystemThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRSystemCore"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRSystemCore"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasDocumentLevelPreprocessing"/>
+                <Class IRI="#DocumentLevelPreprocessing"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasIndexer"/>
+                <Class IRI="#Indexer"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasQueryLevelPreprocessing"/>
+                <Class IRI="#QueryLevelPreprocessing"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasScorer"/>
+                <Class IRI="#Scorer"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasReranker"/>
+                <Class IRI="#Reranker"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexer"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LM"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LanguageModeling"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LatentSemanticIndexing"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lemmatizer"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lemmatizer"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinguisticFilter"/>
+        <Class IRI="#FilterContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Merger"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#POSTagger"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#POSTagger"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Preprocessing"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PreprocessingComponent"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbabilisticModel"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QueryLevelPreprocessing"/>
+        <Class IRI="#Preprocessing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QueryLevelPreprocessing"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+                <Class IRI="#QueryLevelPreprocessingComponent"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+                <Class IRI="#Tokenizer"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+        <Class IRI="#PreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+            <Class IRI="#QueryLevelPreprocessingComponent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reranker"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Run"/>
+        <Class IRI="#ExperimentComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Score"/>
+        <Class IRI="#ExperimentComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scorer"/>
+        <Class IRI="#IRSystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScoringFunction"/>
+        <Class IRI="#IRModelThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spellchecker"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spellchecker"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StandardBoolean"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stemmer"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stemmer"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StopWords"/>
+        <Class IRI="#FilterContent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TF"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TF"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+            <Class IRI="#TF-IDF"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TF-IDF"/>
+        <Class IRI="#WeightingSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Task"/>
+        <Class IRI="#EvaluationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Task"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasTestCollection"/>
+                <Class IRI="#TestCollection"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#isTaskOf"/>
+                <Class IRI="#Event"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestCollection"/>
+        <Class IRI="#ExperimentComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestCollection"/>
+        <ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasTestCollectionComponent"/>
+                    <Class IRI="#Topics"/>
+                </ObjectSomeValuesFrom>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasTestCollectionComponent"/>
+                    <Class IRI="#Collection"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasTestCollection"/>
+                    <Class IRI="#Task"/>
+                </ObjectMaxCardinality>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty IRI="#isTestCollectionOf"/>
+                    <Class IRI="#Event"/>
+                </ObjectMaxCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestCollection"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTestCollectionComponent"/>
+                <Class IRI="#Topics"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasTestCollectionComponent"/>
+                <Class IRI="#Collection"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestCollectionComponent"/>
+        <Class IRI="#ExperimentComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tokenizer"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tokenizer"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Topics"/>
+        <Class IRI="#TestCollectionComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Topics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGrountruth"/>
+            <Class IRI="#Groundtruth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VectorSpaceModel"/>
+        <Class IRI="#IRModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightingSchema"/>
+        <Class IRI="#IRModelThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#BIR"/>
+        <Class IRI="#BM25"/>
+        <Class IRI="#IDF"/>
+        <Class IRI="#LM"/>
+        <Class IRI="#TF"/>
+        <Class IRI="#TF-IDF"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Collection"/>
+        <Class IRI="#Groundtruth"/>
+        <Class IRI="#Topics"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+        <Class IRI="#QueryLevelPreprocessing"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EvaluationCampaign"/>
+        <Class IRI="#EvaluationMeasure"/>
+        <Class IRI="#Event"/>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#ExperimentComponent"/>
+        <Class IRI="#Task"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EvaluationMeasureRankedResult"/>
+        <Class IRI="#EvaluationMeasureUnrankedResult"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EvaluationThing"/>
+        <Class IRI="#IRModelThing"/>
+        <Class IRI="#IRSystemThing"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IRSystem"/>
+        <Class IRI="#IRSystemComponent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IRSystemCore"/>
+        <Class IRI="#Indexer"/>
+        <Class IRI="#Merger"/>
+        <Class IRI="#Preprocessing"/>
+        <Class IRI="#PreprocessingComponent"/>
+        <Class IRI="#Scorer"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belongsToIRSystem"/>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBeenUsedOnEvent"/>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBeenUsedOnTask"/>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasChallenge"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCollection"/>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessing"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEvent"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasExperimentComponent"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGrountruth"/>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIRSystemCore"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIndexer"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMerger"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessing"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReranker"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasScore"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasScorer"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasScoringFunction"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTask"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTestCollection"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTopics"/>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWeightingSchema"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBasedOnIRModel"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBasedOnScoringFunction"/>
+        <ObjectProperty IRI="#fromIRSystemToIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBasedOnWeightingSchema"/>
+        <ObjectProperty IRI="#fromIRSystemToIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isChallengeOf"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCollectionLevelPreprocessingOf"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCollectionOf"/>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEventOf"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFollowedByCollectionLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#innerIRSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isGroundtruthOf"/>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInstanceOfEvaluationMeasureParametric"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTaskOf"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTestCollectionOf"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTopicsOf"/>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVariantOfScoringFunction"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVariantOfWeightingSchema"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWeightingSchemaOf"/>
+        <ObjectProperty IRI="#innerIRModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#measuredByEvaluationMeasure"/>
+        <ObjectProperty IRI="#innerEvaluation"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+        <ObjectProperty IRI="#isFollowedByCollectionLevelPreprocessingComponent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isChallengeOf"/>
+        <ObjectProperty IRI="#hasChallenge"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCollection"/>
+        <ObjectProperty IRI="#isCollectionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+        <ObjectProperty IRI="#isCollectionLevelPreprocessingOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isEventOf"/>
+        <ObjectProperty IRI="#hasEvent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isGroundtruthOf"/>
+        <ObjectProperty IRI="#hasGrountruth"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTask"/>
+        <ObjectProperty IRI="#isTaskOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isTopicsOf"/>
+        <ObjectProperty IRI="#hasTopics"/>
+    </InverseObjectProperties>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToIRSystem"/>
+        <Class IRI="#Run"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+        <Class IRI="#IRSystemThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fromIRSystemToIRModel"/>
+        <Class IRI="#IRSystemThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBeenUsedOnEvent"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBeenUsedOnTask"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChallenge"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCollection"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessing"/>
+        <Class IRI="#IRSystemCore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEvent"/>
+        <Class IRI="#EvaluationCampaign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExperimentComponent"/>
+        <Class IRI="#Experiment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGrountruth"/>
+        <Class IRI="#Topics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIRSystemCore"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIndexer"/>
+        <Class IRI="#IRSystemCore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMerger"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessing"/>
+        <Class IRI="#IRSystemCore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+        <Class IRI="#QueryLevelPreprocessing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReranker"/>
+        <ObjectUnionOf>
+            <Class IRI="#IRSystem"/>
+            <Class IRI="#IRSystemCore"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScore"/>
+        <Class IRI="#Experiment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScorer"/>
+        <Class IRI="#IRSystemCore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScoringFunction"/>
+        <Class IRI="#IRModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTask"/>
+        <Class IRI="#Challenge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTestCollection"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+        <ObjectUnionOf>
+            <Class IRI="#TestCollection"/>
+            <Class IRI="#TestCollectionComponent"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopics"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeightingSchema"/>
+        <Class IRI="#IRModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#innerEvaluation"/>
+        <Class IRI="#EvaluationThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#innerIRModel"/>
+        <Class IRI="#IRModelThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#innerIRSystem"/>
+        <Class IRI="#IRSystemThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOnIRModel"/>
+        <Class IRI="#IRModelVariant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOnScoringFunction"/>
+        <Class IRI="#Scorer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOnWeightingSchema"/>
+        <Class IRI="#Indexer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isChallengeOf"/>
+        <Class IRI="#Challenge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCollectionLevelPreprocessingOf"/>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCollectionOf"/>
+        <Class IRI="#Collection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEventOf"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFollowedByCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGroundtruthOf"/>
+        <Class IRI="#Groundtruth"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInstanceOfEvaluationMeasureParametric"/>
+        <ObjectUnionOf>
+            <Class IRI="#EvaluationMeasureRankedResult"/>
+            <Class IRI="#EvaluationMeasureUnrankedResult"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTaskOf"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#TestCollection"/>
+            <Class IRI="#TestCollectionComponent"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTestCollectionOf"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTopicsOf"/>
+        <Class IRI="#Topics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVariantOfScoringFunction"/>
+        <Class IRI="#ScoringFunction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVariantOfWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWeightingSchemaOf"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#measuredByEvaluationMeasure"/>
+        <Class IRI="#Score"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToIRSystem"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#followsCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#followsDocumentLevelPreprocessingComponent"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#followsQueryLevelPreprocessingComponent"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fromIRSystemToEvaluation"/>
+        <Class IRI="#EvaluationThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fromIRSystemToIRModel"/>
+        <Class IRI="#IRModelThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBeenUsedOnEvent"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBeenUsedOnTask"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChallenge"/>
+        <Class IRI="#Challenge"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCollection"/>
+        <Class IRI="#Collection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessing"/>
+        <Class IRI="#CollectionLevelPreprocessing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessing"/>
+        <Class IRI="#DocumentLevelPreprocessing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDocumentLevelPreprocessingComponent"/>
+        <Class IRI="#DocumentLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEvent"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExperimentComponent"/>
+        <Class IRI="#ExperimentComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGrountruth"/>
+        <Class IRI="#Groundtruth"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIRSystemCore"/>
+        <Class IRI="#IRSystemCore"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIndexer"/>
+        <Class IRI="#Indexer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMerger"/>
+        <Class IRI="#Merger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessing"/>
+        <Class IRI="#QueryLevelPreprocessing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasQueryLevelPreprocessingComponent"/>
+        <Class IRI="#QueryLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReranker"/>
+        <Class IRI="#Reranker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScore"/>
+        <Class IRI="#EvaluationMeasure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScorer"/>
+        <Class IRI="#Scorer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScoringFunction"/>
+        <Class IRI="#ScoringFunction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTask"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTestCollection"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTestCollectionComponent"/>
+        <ObjectUnionOf>
+            <Class IRI="#TestCollection"/>
+            <Class IRI="#TestCollectionComponent"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTopics"/>
+        <Class IRI="#Topics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#innerEvaluation"/>
+        <Class IRI="#EvaluationThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#innerIRModel"/>
+        <Class IRI="#IRModelThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#innerIRSystem"/>
+        <Class IRI="#IRSystemThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOnIRModel"/>
+        <Class IRI="#IRModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOnScoringFunction"/>
+        <Class IRI="#ScoringFunction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOnWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isChallengeOf"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCollectionLevelPreprocessingOf"/>
+        <Class IRI="#IRSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCollectionOf"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComponentOfWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEventOf"/>
+        <Class IRI="#EvaluationCampaign"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFollowedByCollectionLevelPreprocessingComponent"/>
+        <Class IRI="#CollectionLevelPreprocessingComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGroundtruthOf"/>
+        <Class IRI="#Topics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInstanceOfEvaluationMeasureParametric"/>
+        <Class IRI="#EvaluationMeasureParametric"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTaskOf"/>
+        <Class IRI="#Challenge"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTestCollectionComponentOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#TestCollection"/>
+            <Class IRI="#TestCollectionComponent"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTestCollectionOf"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTopicsOf"/>
+        <Class IRI="#TestCollection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVariantOfScoringFunction"/>
+        <Class IRI="#ScoringFunction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVariantOfWeightingSchema"/>
+        <Class IRI="#WeightingSchema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWeightingSchemaOf"/>
+        <Class IRI="#IRModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#measuredByEvaluationMeasure"/>
+        <Class IRI="#EvaluationMeasure"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#acronym"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#collectionName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#eventID"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#eventYear"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#references"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#value"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#acronym"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#collectionName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#value"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#acronym"/>
+        <Class IRI="#EvaluationCampaign"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#collectionName"/>
+        <Class IRI="#Collection"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#eventID"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#eventYear"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#references"/>
+        <Class IRI="#IRModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#value"/>
+        <Class IRI="#Score"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#acronym"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#collectionName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Challenge</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Challenge is an area of focus in which particular retrieval tasks are defined. [http://trec.nist.gov/tracks.html]
+
+Each event is composed of a set of Challenge and each Challenge takes place, possibly, in different Event.
+
+To each Challenge belongs a set of TestCollection, but a TestCollection of a Challenge is a test collection of only one Challenge.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DiacriticRemover</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Diacritic is a glyph added to a letter, or basic glyph.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EvaluationCampaign</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">EvaluationCampaign is a series of events, such as the Text REtrieval Conference (TREC) and the Cross-Language Evaluation Forum (CLEF),
+
+To an EvaluationCampaign belongs a sequence of Event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EvaluationThing</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Folder for Evaluation things</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Event</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An Event is an event of an EvaluationCampaign.
+
+It belongs exactly to one EvaluationCampagin and within the event are taking some Challenge.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExperimentComponent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This sould express that an experiment has the following components:
+- IR System
+- Test Collection
+- a Run (output of IR system on Test Collection)
+- measures used for evaluation (as a relationship to measure classes)
+- [opt] challenge
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HeuristicModel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">List of well-known heuristic models: TF-IDF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IRModelThing</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Folder for Information Retrieval Model things</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IRSystem</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://gonzo.ifs.tuwien.ac.at/diagramo/editor/viewDiagram.php?diagramId=1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IRSystemComponent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This component merge the results of multiple scorer components.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IRSystemThing</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Folder for Information Retrieval System things</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Indexer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This component is responsible to make an index based on a Weighting Schema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Run</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Run models the result of an execution of a specific IR System.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scorer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This component is responsible to score the document based on a Scoring Function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCollection</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Example:
+CLEF_IP_&lt;year&gt;_TestColection hasCollection CLEF_IP_&lt;year&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#references</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">In BibTeX format</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
